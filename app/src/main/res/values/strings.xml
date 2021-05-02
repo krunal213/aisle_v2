@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Aisle</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_get_otp">Get OTP</string>
+    <string name="title_enter_your_phone_number">Enter Your Phone Number</string>
+    <string name="title_continue">Continue</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="key_phone_number">phone number</string>
+    <string name="error_something_went_wrong">Something went wrong</string>
+    <string name="pref_phone_number">pref_phone_number</string>
+    <string name="pref_token">pref_token</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Aisle</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_notes">Notes</string>
+    <string name="title_personal_meessage">Personal message to you</string>
+    <string name="title_interested_in_you">Interested In You</string>
+    <string name="title_premium_members">Premium members can view all their like at once</string>
+    <string name="title_upgrade">Upgrade</string>
+    <string name="comma">,\t</string>
+    <string name="title_discover">Discover</string>
+    <string name="title_matches">Matches</string>
+    <string name="title_profile">Profile</string>
+</resources>

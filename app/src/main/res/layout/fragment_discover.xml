@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="homeDisplayContent"
+            type="com.app.aisle.entity.home.HomeDisplayContent" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container_shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/sixteen_dp">
+
+                    <TextView
+                        android:id="@+id/label_notes_shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGrey"
+                        android:fontFamily="@font/gilroy_semi_bold"
+                        android:gravity="center"
+                        android:textSize="27sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label_personal_message_shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorGrey"
+                        android:fontFamily="@font/gilroy_semi_bold"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@id/label_notes_shimmer" />
+
+                    <ImageView
+                        android:id="@+id/image_profile_shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorGrey"
+                        app:layout_constraintTop_toBottomOf="@id/label_personal_message_shimmer" />
+
+                    <TextView
+                        android:id="@+id/textview_profile_shimmer"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/tweleve_dp"
+                        android:background="@color/gray"
+                        android:fontFamily="@font/gilroy_semi_bold"
+                        android:textSize="22sp"
+                        app:layout_constraintBottom_toTopOf="@id/label_review_shimmer"
+                        app:layout_constraintLeft_toLeftOf="@id/image_profile_shimmer" />
+
+                    <TextView
+                        android:id="@+id/label_review_shimmer"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/tweleve_dp"
+                        android:layout_marginBottom="@dimen/tweleve_dp"
+                        android:background="@color/gray"
+                        android:fontFamily="@font/gilroy_semi_bold"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@id/image_profile_shimmer"
+                        app:layout_constraintLeft_toLeftOf="@id/image_profile_shimmer" />
+
+                    <TextView
+                        android:id="@+id/label_interested_in_you_shimmer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorGrey"
+                        android:fontFamily="@font/gilroy_semi_bold"
+                        android:textSize="22sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/button_upgrade_shimmer"
+                        app:layout_constraintTop_toBottomOf="@id/image_profile_shimmer" />
+
+                    <TextView
+                        android:id="@+id/label_premium_members_shimmer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@color/colorGrey"
+                        android:fontFamily="@font/gilroy_semi_bold"
+                        android:textSize="15sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/button_upgrade_shimmer"
+                        app:layout_constraintTop_toBottomOf="@id/label_interested_in_you_shimmer" />
+
+                    <TextView
+                        android:id="@+id/button_upgrade_shimmer"
+                        android:layout_width="113dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="@dimen/sixteen_dp"
+                        android:background="@drawable/drawable_rounded_button_gray"
+                        android:fontFamily="@font/gilroy_semi_bold"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="@id/label_premium_members_shimmer"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/recyclerview_likes_you_shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/sixteen_dp"
+                        app:layout_constraintTop_toBottomOf="@id/label_premium_members_shimmer">
+
+                        <ImageView
+                            android:id="@+id/image_one"
+                            android:layout_width="0dp"
+                            android:layout_height="250dp"
+                            android:layout_marginRight="@dimen/sixteen_dp"
+                            android:background="@color/colorGrey"
+                            android:elevation="0dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/image_two"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/image_two"
+                            android:layout_width="0dp"
+                            android:layout_height="250dp"
+                            android:background="@color/colorGrey"
+                            android:elevation="0dp"
+                            app:layout_constraintLeft_toRightOf="@id/image_one"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/sixteen_dp">
+
+                <TextView
+                    android:id="@+id/label_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sixteen_dp"
+                    android:fontFamily="@font/gilroy_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/title_notes"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_personal_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/gilroy_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/title_personal_meessage"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/label_notes" />
+
+                <ImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:src="@{homeDisplayContent.inviteUserImage}"
+                    app:layout_constraintTop_toBottomOf="@id/label_personal_message"
+                    tools:src="@drawable/user_meena" />
+
+                <TextView
+                    android:id="@+id/textview_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tweleve_dp"
+                    android:fontFamily="@font/gilroy_semi_bold"
+                    android:text="@{homeDisplayContent.inviteUserName.concat(@string/comma).concat(homeDisplayContent.inviteUserAge)}"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/label_review"
+                    app:layout_constraintLeft_toLeftOf="@id/image_profile"
+                    tools:text="Meena, 23" />
+
+                <TextView
+                    android:id="@+id/label_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tweleve_dp"
+                    android:layout_marginBottom="@dimen/tweleve_dp"
+                    android:fontFamily="@font/gilroy_semi_bold"
+                    android:text="Tap to review 50+ notes"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/image_profile"
+                    app:layout_constraintLeft_toLeftOf="@id/image_profile"
+                    tools:text="Tap to review 50+ notes" />
+
+                <TextView
+                    android:id="@+id/label_interested_in_you"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/gilroy_semi_bold"
+                    android:text="@string/title_interested_in_you"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/button_upgrade"
+                    app:layout_constraintTop_toBottomOf="@id/image_profile" />
+
+                <TextView
+                    android:id="@+id/label_premium_members"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="@dimen/eight_dp"
+                    android:fontFamily="@font/gilroy_semi_bold"
+                    android:text="@string/title_premium_members"
+                    android:textColor="@color/gray_new"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/button_upgrade"
+                    app:layout_constraintTop_toBottomOf="@id/label_interested_in_you" />
+
+                <TextView
+                    android:id="@+id/button_upgrade"
+                    android:layout_width="113dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/sixteen_dp"
+                    android:background="@drawable/drawable_rounded_button"
+                    android:fontFamily="@font/gilroy_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/title_upgrade"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/label_premium_members"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_likes_you"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sixteen_dp"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    android:paddingBottom="@dimen/sixteen_dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/label_premium_members"
+                    app:spanCount="2"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/adapter_likes_you" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

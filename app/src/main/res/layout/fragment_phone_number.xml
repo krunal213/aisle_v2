@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="30dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="80dp" />
+
+        <TextView
+            android:id="@+id/label_get_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/title_get_otp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/guideline_vertical"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal" />
+
+        <TextView
+            android:id="@+id/label_enter_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/eight_dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/title_enter_your_phone_number"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toRightOf="@id/guideline_vertical"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_get_otp" />
+
+        <TextView
+            android:id="@+id/label_india"
+            android:layout_width="64dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="@dimen/tweleve_dp"
+            android:background="@drawable/drawable_corner"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:text="+91"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/guideline_vertical"
+            app:layout_constraintTop_toBottomOf="@id/label_enter_phone_number" />
+
+        <EditText
+            android:id="@+id/editext_phone_number"
+            android:layout_width="147dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="@dimen/eight_dp"
+            android:background="@drawable/drawable_corner"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/label_india"
+            app:layout_constraintTop_toTopOf="@id/label_india"
+            tools:text="8806616913" />
+
+        <TextView
+            android:id="@+id/button_continue"
+            android:layout_width="96dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/sixteen_dp"
+            android:background="@drawable/drawable_rounded_button"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:text="@string/title_continue"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@id/guideline_vertical"
+            app:layout_constraintTop_toBottomOf="@id/label_india" />
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/twenty_four_dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_continue"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
